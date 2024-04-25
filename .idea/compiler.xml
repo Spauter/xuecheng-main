@@ -2,10 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="xuecheng-main-content-model" />
         <module name="xuecheng-main-content-api" />
       </profile>
     </annotationProcessing>
@@ -18,6 +20,7 @@
       <module name="xuecheng-main-base" options="" />
       <module name="xuecheng-main-content" options="" />
       <module name="xuecheng-main-content-api" options="-parameters" />
+      <module name="xuecheng-main-content-model" options="-parameters" />
       <module name="xuecheng-main-generator" options="" />
       <module name="xuecheng-main-parent" options="" />
     </option>

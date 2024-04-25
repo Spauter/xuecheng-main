@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/xuecheng-main.iml" filepath="$PROJECT_DIR$/.idea/xuecheng-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-main-base/xuecheng-main-base.iml" filepath="$PROJECT_DIR$/xuecheng-main-base/xuecheng-main-base.iml" />
     </modules>
   </component>
 </project>

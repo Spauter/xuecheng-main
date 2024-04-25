@@ -10,6 +10,7 @@
         <groupId>com.bloducspauter</groupId>
         <artifactId>xuecheng-main-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../xuecheng-main-parent</relativePath>
     </parent>
     <modules>
         <module>xuecheng-main-content-service</module>
