@@ -6,13 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xuecheng-main-base" />
+        <module name="xuecheng-main-content-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xuecheng-main-generator" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="xuecheng-main-base" options="-parameters" />
+      <module name="xuecheng-main-base" options="" />
+      <module name="xuecheng-main-content" options="" />
+      <module name="xuecheng-main-content-api" options="-parameters" />
+      <module name="xuecheng-main-generator" options="" />
       <module name="xuecheng-main-parent" options="" />
     </option>
   </component>

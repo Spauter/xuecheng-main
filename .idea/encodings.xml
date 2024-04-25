@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/xuecheng-main-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-content/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-content/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-content/xuecheng-main-content-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-content/xuecheng-main-content-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-content/xuecheng-main-content-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-main-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-main-parent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/xuecheng-main-content/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/xuecheng-main-content/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/xuecheng-main-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/xuecheng-main-generator/src/main/resources" charset="UTF-8" />
   </component>
 </project>
