@@ -22,6 +22,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <com.spring4all>1.9.0.RELEASE</com.spring4all>
         <mybatis.plus.boot.starter.version>3.4.2</mybatis.plus.boot.starter.version>
         <spring.boot.starter.data.redis>2.7.16</spring.boot.starter.data.redis>
         <spring.session.data.redis>2.7.2</spring.session.data.redis>
@@ -153,6 +154,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>
                 <version>${org.springframework.cloud}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.spring4all</groupId>
+                <artifactId>swagger-spring-boot-starter</artifactId>
+                <version>${com.spring4all}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
