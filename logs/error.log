@@ -14,7 +14,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -55,7 +55,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -102,7 +102,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uiConfiguration' defined in com.spring4all.swagger.SwaggerAutoConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [springfox.documentation.swagger.web.UiConfiguration]: Factory method 'uiConfiguration' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/swagger/web/UiConfigurationBuilder
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633)
@@ -157,7 +157,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)

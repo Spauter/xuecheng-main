@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication(scanBasePackages = {"com.bloducspauter.content"})
-public class ContentApplication {
+public class ContentApiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ContentApplication.class, args);
+        SpringApplication.run(ContentApiApplication.class, args);
     }
 }

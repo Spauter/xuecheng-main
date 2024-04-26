@@ -58,7 +58,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -99,7 +99,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -130,8 +130,8 @@ Caused by: java.lang.NullPointerException
 2024-04-25 21:27:39,790 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.16, Spring v5.3.30
 2024-04-25 21:27:39,791 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
 2024-04-25 21:27:39,791 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
-2024-04-25 21:27:39,793 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApplication
-2024-04-25 21:27:39,793 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApplication
+2024-04-25 21:27:39,793 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApiApplication
+2024-04-25 21:27:39,793 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApiApplication
 2024-04-25 21:27:39,855 DEBUG [main][AbstractApplicationContext.java:629] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46b695ec
 2024-04-25 21:27:39,855 DEBUG [main][AbstractApplicationContext.java:629] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46b695ec
 2024-04-25 21:27:39,887 DEBUG [main][DefaultSingletonBeanRegistry.java:225] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
@@ -3468,7 +3468,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -3509,7 +3509,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -3540,8 +3540,8 @@ Caused by: java.lang.NullPointerException
 2024-04-25 21:34:33,943 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.16, Spring v5.3.30
 2024-04-25 21:34:33,945 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
 2024-04-25 21:34:33,945 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
-2024-04-25 21:34:33,946 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApplication
-2024-04-25 21:34:33,946 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApplication
+2024-04-25 21:34:33,946 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApiApplication
+2024-04-25 21:34:33,946 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApiApplication
 2024-04-25 21:34:34,017 DEBUG [main][AbstractApplicationContext.java:629] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78d39a69
 2024-04-25 21:34:34,017 DEBUG [main][AbstractApplicationContext.java:629] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78d39a69
 2024-04-25 21:34:34,054 DEBUG [main][DefaultSingletonBeanRegistry.java:225] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
@@ -6370,7 +6370,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uiConfiguration' defined in com.spring4all.swagger.SwaggerAutoConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [springfox.documentation.swagger.web.UiConfiguration]: Factory method 'uiConfiguration' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/swagger/web/UiConfigurationBuilder
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633)
@@ -6431,7 +6431,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uiConfiguration' defined in com.spring4all.swagger.SwaggerAutoConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [springfox.documentation.swagger.web.UiConfiguration]: Factory method 'uiConfiguration' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/swagger/web/UiConfigurationBuilder
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633)
@@ -6476,8 +6476,8 @@ Caused by: java.lang.ClassNotFoundException: springfox.documentation.swagger.web
 2024-04-25 21:39:23,773 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.16, Spring v5.3.30
 2024-04-25 21:39:23,776 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
 2024-04-25 21:39:23,776 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
-2024-04-25 21:39:23,777 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApplication
-2024-04-25 21:39:23,777 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApplication
+2024-04-25 21:39:23,777 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApiApplication
+2024-04-25 21:39:23,777 DEBUG [main][SpringApplication.java:664] - Loading source class com.bloducspauter.ContentApiApplication
 2024-04-25 21:39:23,854 DEBUG [main][AbstractApplicationContext.java:629] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@595f4da5
 2024-04-25 21:39:23,854 DEBUG [main][AbstractApplicationContext.java:629] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@595f4da5
 2024-04-25 21:39:23,893 DEBUG [main][DefaultSingletonBeanRegistry.java:225] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
@@ -9814,7 +9814,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
@@ -9855,7 +9855,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16)
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16)
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)

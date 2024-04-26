@@ -14,7 +14,7 @@
 2024-04-25 21:42:40.847  INFO 22592 --- [main] c.b.ContentApplication                   : Starting ContentApplication using Java 11.0.16.1 on DESKTOP-3R2LLBD with PID 22592 (D:\spouter\JAVA\Github\xuecheng-main\xuecheng-main-content\xuecheng-main-content-api\target\classes started by BS in D:\spouter\JAVA\github\xuecheng-main)
 2024-04-25 21:42:40.889 DEBUG 22592 --- [main] c.b.ContentApplication                   : Running with Spring Boot v2.7.16, Spring v5.3.30
 2024-04-25 21:42:40.894  INFO 22592 --- [main] c.b.ContentApplication                   : No active profile set, falling back to 1 default profile: "default"
-2024-04-25 21:42:40.896 DEBUG 22592 --- [main] o.s.b.SpringApplication                  : Loading source class com.bloducspauter.ContentApplication
+2024-04-25 21:42:40.896 DEBUG 22592 --- [main] o.s.b.SpringApplication                  : Loading source class com.bloducspauter.ContentApiApplication
 2024-04-25 21:42:41.120 DEBUG 22592 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f330eb9
 2024-04-25 21:42:41.220 DEBUG 22592 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
 2024-04-25 21:42:41.286 DEBUG 22592 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
@@ -1688,7 +1688,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
@@ -1748,7 +1748,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
@@ -1808,7 +1808,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
@@ -1868,7 +1868,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
@@ -1928,7 +1928,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:17) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:17) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
 	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
@@ -1995,7 +1995,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:15) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:15) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56) ~[springfox-spring-webmvc-3.0.0.jar:3.0.0]
 	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113) ~[springfox-core-3.0.0.jar:3.0.0]
@@ -2120,7 +2120,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to proces
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:16) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:16) ~[classes/:?]
 Caused by: java.io.FileNotFoundException: class path resource [springfox/documentation/spring/web/SpringfoxWebConfiguration.class] cannot be opened because it does not exist
 	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:203) ~[spring-core-5.3.30.jar:5.3.30]
 	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.30.jar:5.3.30]
@@ -2173,7 +2173,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.16.jar:2.7.16]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.16.jar:2.7.16]
-	at com.bloducspauter.ContentApplication.main(ContentApplication.java:13) ~[classes/:?]
+	at com.bloducspauter.ContentApiApplication.main(ContentApplication.java:13) ~[classes/:?]
 Caused by: java.lang.NullPointerException
 	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56) ~[springfox-spring-webmvc-2.10.5.jar:null]
 	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:112) ~[springfox-core-2.10.5.jar:null]
