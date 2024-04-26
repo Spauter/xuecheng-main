@@ -10,7 +10,7 @@
 
     <groupId>com.bloducspauter.base</groupId>
     <artifactId>xuecheng-main-base</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <distributionManagement>
         <site>

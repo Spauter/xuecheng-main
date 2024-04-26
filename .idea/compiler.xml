@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="xuecheng-main-content-model" />
+        <module name="xuecheng-main-base" />
         <module name="xuecheng-main-content-api" />
       </profile>
     </annotationProcessing>
@@ -17,7 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="xuecheng-main-base" options="" />
+      <module name="xuecheng-main-base" options="-parameters" />
       <module name="xuecheng-main-content" options="" />
       <module name="xuecheng-main-content-api" options="-parameters" />
       <module name="xuecheng-main-content-model" options="-parameters" />

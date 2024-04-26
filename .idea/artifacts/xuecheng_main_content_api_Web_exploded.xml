@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="xuecheng-main-content-api:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/xuecheng_main_content_api_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="xuecheng-main-content-api/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="xuecheng-main-content-api" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
