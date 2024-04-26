@@ -1,4 +1,4 @@
-package com.bloducspauter.content;
+package com.bloducspauter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

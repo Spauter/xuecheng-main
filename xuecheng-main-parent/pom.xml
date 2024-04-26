@@ -33,9 +33,16 @@
         <com.alibaba.druid>1.2.16</com.alibaba.druid>
         <com.baomidou>3.4.2</com.baomidou>
         <com.alibaba.csp>1.8.6</com.alibaba.csp>
+        <com.github.xiaoymin>4.4.0</com.github.xiaoymin>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--            knife4j-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+                <version>${com.github.xiaoymin}</version>
+            </dependency>
             <!--        nacos注册发现-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
