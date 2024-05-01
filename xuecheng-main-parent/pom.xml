@@ -11,6 +11,7 @@
     <modules>
         <module>../xuecheng-main-content</module>
         <module>../xuecheng-main-base</module>
+        <module>../xuecheng-main-system</module>
     </modules>
 
     <parent>

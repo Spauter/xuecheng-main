@@ -7,6 +7,10 @@
         <option value="$PROJECT_DIR$/xuecheng-main-parent/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-content/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-content/xuecheng-main-content-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-system/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-main-system/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-model/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
