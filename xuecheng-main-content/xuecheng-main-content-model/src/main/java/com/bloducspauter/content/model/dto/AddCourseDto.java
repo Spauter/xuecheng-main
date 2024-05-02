@@ -8,6 +8,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 /**
+ * 接口请求信息
  * @author Bloduc Spauter
  *
  */

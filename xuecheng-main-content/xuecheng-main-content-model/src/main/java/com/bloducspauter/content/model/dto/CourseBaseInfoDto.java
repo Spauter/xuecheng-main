@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 
 
 /**
+ * 这是课程的额外信息
  * @author Bloduc Spauter
  *
  */

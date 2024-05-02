@@ -5,11 +5,12 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bloducspauter.base.model.PageParams;
 import com.bloducspauter.base.model.PageResult;
+import com.bloducspauter.content.mapper.CourseCategoryMapper;
+import com.bloducspauter.content.model.dto.CourseCategoryTreeDto;
 import com.bloducspauter.content.model.dto.QueryCourseParamsDto;
 import com.bloducspauter.content.model.po.CourseBase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.common.record.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.bloducspauter.content.mapper.CourseBaseMapper;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,11 +18,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Arrays;
 import java.util.List;
 
-//@SpringBootTest
+@SpringBootTest
 public class CourseBaseMapperTest {
 
     @Autowired
     private CourseBaseMapper courseBaseMapper;
+
+    @Autowired
+    private CourseCategoryMapper courseCategoryMapper;
 
     @Test
     public void testSelectById() {
@@ -86,10 +90,10 @@ public class CourseBaseMapperTest {
 
     }
 
-    public int[] r(int[] a,int index){
-        int temp;
-        for (int i=0, temp=0;i<a.length;i++){
-
-        }
+    @Test
+    public void courseCategoryMapperTest() {
+        List<CourseCategoryTreeDto>courseCategories=courseCategoryMapper.selectTreeNodes("1");
+        courseCategories.forEach(System.out::println);
     }
+
 }
