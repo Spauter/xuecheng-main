@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bloducspauter.base.model.PageParams;
 import com.bloducspauter.base.model.PageResult;
 import com.bloducspauter.content.mapper.CourseBaseMapper;
+import com.bloducspauter.content.model.dto.AddCourseDto;
+import com.bloducspauter.content.model.dto.CourseBaseInfoDto;
 import com.bloducspauter.content.model.dto.QueryCourseParamsDto;
 import com.bloducspauter.content.model.po.CourseBase;
 import com.bloducspauter.content.service.CourseBaseInfoService;
@@ -41,5 +43,10 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         List<CourseBase> courseBaseList=pageResult.getRecords();
         long total = courseBasePage.getTotal();
         return new PageResult<>(courseBaseList, total, pageSize);
+    }
+
+    @Override
+    public CourseBaseInfoDto createCourseBase(Long id,AddCourseDto addCourseDto) {
+        return null;
     }
 }
