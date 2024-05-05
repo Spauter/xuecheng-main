@@ -1,6 +1,7 @@
 package com.bloducspauter.content.service;
 
 
+import com.bloducspauter.base.exception.InsertEntityFailedException;
 import com.bloducspauter.base.model.PageParams;
 import com.bloducspauter.base.model.PageResult;
 import com.bloducspauter.content.model.dto.AddCourseDto;
@@ -27,5 +28,5 @@ public interface CourseBaseInfoService {
      * @param addCourseDto AddCourseDto
      * @return CourseBaseInfoDto
      */
-    CourseBaseInfoDto createCourseBase(Long id,AddCourseDto addCourseDto);
+    CourseBaseInfoDto createCourseBase(Long id,AddCourseDto addCourseDto) throws InsertEntityFailedException;
 }
