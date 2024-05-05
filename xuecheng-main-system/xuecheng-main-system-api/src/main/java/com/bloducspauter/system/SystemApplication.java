@@ -16,7 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 @SpringBootApplication
 @EnableSwagger2WebMvc
 public class SystemApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(SystemApplication.class,args);
     }

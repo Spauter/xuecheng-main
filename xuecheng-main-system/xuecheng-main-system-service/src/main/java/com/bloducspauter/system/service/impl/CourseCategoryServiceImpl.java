@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bloducspauter.content.mapper.CourseCategoryMapper;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 public class CourseCategoryServiceImpl implements CourseCategoryService {
-    @Autowired
+    @Resource
     private CourseCategoryMapper courseCategoryMapper;
 
     @Override
