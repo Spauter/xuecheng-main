@@ -1,6 +1,5 @@
-package com.bloducspauter.content.config;
+package com.bloducspauter.system.config;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -38,15 +37,15 @@ public class Swagger2Config {
                         .termsOfServiceUrl("https://doc.xiaominfo.com/")
                         .contact("xiaoymin@foxmail.com")
                         .version("1.0")
-                        .build())
+                        .build()
+                )
                 //分组名称
                 .groupName("用户服务")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("com.bloducspauter.content.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.bloducspauter.system.controller;"))
                 .paths(PathSelectors.any())
                 .build();
         return docket;
     }
 }
-

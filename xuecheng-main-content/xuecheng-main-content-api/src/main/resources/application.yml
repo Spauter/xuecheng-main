@@ -8,13 +8,7 @@ spring:
     username: root
     password: 1234567890
 logging:
-  level:
-    root: info
-    org.springframework.web: info
-    org.apache: info
-  logback:
-    rollingpolicy:
-      max-file-size: 1MB
+  config: classpath:log4j2-dev.xml
   file:
     path: logs/
 mybatis-plus:

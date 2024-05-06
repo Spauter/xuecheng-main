@@ -5,10 +5,8 @@ package com.bloducspauter.base.enums;
 import lombok.Getter;
 
 /**
- * @description 通用错误信息
+ * 通用错误信息
  * @author Mr.M
- * @date 2022/9/6 11:29
- * @version 1.0
  */
 @Getter
 public enum CommonError {

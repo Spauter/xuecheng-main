@@ -1,6 +1,6 @@
-package com.bloducspauter.system.config;
+package com.bloducspauter.base.config;
 
-import org.mybatis.spring.annotation.MapperScan;
+
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -13,7 +13,6 @@ import java.io.IOException;
  * 用于解决跨域问题
  */
 @Component
-@MapperScan("com.bloducspauter.content.mapper")
 public class SimpleCORSFilter implements Filter {
 
     @Override
