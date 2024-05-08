@@ -1,4 +1,4 @@
-package com.bloducspauter.base.config;
+package com.bloducspauter.content.config;
 
 
 import org.springframework.stereotype.Component;
