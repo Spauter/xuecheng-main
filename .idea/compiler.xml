@@ -17,7 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="xuecheng-main-generator" target="11" />
+      <module name="xuecheng-main" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -27,7 +27,6 @@
       <module name="xuecheng-main-content-api" options="-parameters" />
       <module name="xuecheng-main-content-model" options="-parameters" />
       <module name="xuecheng-main-content-service" options="-parameters" />
-      <module name="xuecheng-main-generator" options="" />
       <module name="xuecheng-main-parent" options="" />
       <module name="xuecheng-main-system-api" options="-parameters" />
       <module name="xuecheng-main-system-model" options="-parameters" />
