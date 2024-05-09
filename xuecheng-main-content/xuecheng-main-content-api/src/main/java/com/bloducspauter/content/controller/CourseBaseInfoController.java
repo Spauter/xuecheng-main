@@ -52,7 +52,7 @@ public class CourseBaseInfoController {
 
 
     @ApiOperation("修改课程")
-    @PutMapping("/course")
+    @RequestMapping("/course")
     public CourseBaseInfoDto modifyCourseBase(@RequestBody @Validated(ValidationGroups.Update.class) EditCourseDto editCourseDto) throws InsertEntityFailedException {
         //获取到用户所属机构的id
         Long companyId = 1232141425L;
