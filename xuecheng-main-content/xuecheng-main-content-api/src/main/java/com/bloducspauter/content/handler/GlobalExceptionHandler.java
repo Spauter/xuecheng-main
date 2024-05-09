@@ -1,8 +1,9 @@
-package com.bloducspauter.base.handler;
+package com.bloducspauter.content.handler;
 
 import com.bloducspauter.base.enums.CommonError;
 import com.bloducspauter.base.exceptions.IllegalParamException;
 import com.bloducspauter.base.exceptions.InsertEntityFailedException;
+import com.bloducspauter.base.handler.RestErrorResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.http.HttpStatus;

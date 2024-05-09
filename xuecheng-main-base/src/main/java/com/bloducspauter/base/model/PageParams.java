@@ -15,6 +15,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PageParams {
-    private Long pageOn = 1L;
-    private Long pageSize = 10L;
+    private Long pageNo;
+    private Long pageSize;
 }

@@ -47,7 +47,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         //根据审核状态准确查询
         queryWrapper.eq(StringUtils.isNotBlank(queryCourseParamsDto.getAuditStatus()), CourseBase::getAuditStatus, queryCourseParamsDto.getAuditStatus());
         //获取分页参数
-        long pageNo = pageParams.getPageOn();
+        long pageNo = pageParams.getPageNo();
         long pageSize = pageParams.getPageSize();
         Page<CourseBase> courseBasePage = new Page<>(pageNo, pageSize);
         //开始进行分页查询
