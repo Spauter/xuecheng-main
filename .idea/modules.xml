@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/xuecheng-main.iml" filepath="$PROJECT_DIR$/.idea/xuecheng-main.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-main-content/xuecheng-main-content-service/xuecheng-main-content-service.iml" filepath="$PROJECT_DIR$/xuecheng-main-content/xuecheng-main-content-service/xuecheng-main-content-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-main-gateway.iml" filepath="$PROJECT_DIR$/xuecheng-main-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system.iml" filepath="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-api/xuecheng-main-system-api.iml" filepath="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-api/xuecheng-main-system-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-model/xuecheng-main-system-model.iml" filepath="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-model/xuecheng-main-system-model.iml" />

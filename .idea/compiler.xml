@@ -10,6 +10,7 @@
         <module name="xuecheng-main-base" />
         <module name="xuecheng-main-content-api" />
         <module name="xuecheng-main-system-service" />
+        <module name="xuecheng-main-gateway" />
         <module name="xuecheng-main-system-model" />
         <module name="xuecheng-main-system-api" />
         <module name="xuecheng-main-content-service" />
@@ -27,6 +28,7 @@
       <module name="xuecheng-main-content-api" options="-parameters" />
       <module name="xuecheng-main-content-model" options="-parameters" />
       <module name="xuecheng-main-content-service" options="-parameters" />
+      <module name="xuecheng-main-gateway" options="-parameters" />
       <module name="xuecheng-main-parent" options="" />
       <module name="xuecheng-main-system-api" options="-parameters" />
       <module name="xuecheng-main-system-model" options="-parameters" />

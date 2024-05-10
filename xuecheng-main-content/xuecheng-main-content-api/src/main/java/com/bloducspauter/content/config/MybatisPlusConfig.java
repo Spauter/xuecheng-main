@@ -13,6 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * </p>
  */
 @Configuration
+@MapperScan(basePackages = {"com.bloducspauter.content.mapper"
+		,"com.bloducspauter.system.mapper"})
 public class MybatisPlusConfig {
 	/**
 	 * 新的分页插件

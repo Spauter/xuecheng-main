@@ -12,6 +12,7 @@
         <module>../xuecheng-main-content</module>
         <module>../xuecheng-main-base</module>
         <module>../xuecheng-main-system</module>
+        <module>../xuecheng-main-gateway</module>
     </modules>
 
     <parent>

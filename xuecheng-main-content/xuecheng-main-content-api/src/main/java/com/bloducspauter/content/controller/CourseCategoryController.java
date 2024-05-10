@@ -6,6 +6,7 @@ package com.bloducspauter.content.controller;
 import com.bloducspauter.content.model.dto.CourseCategoryTreeDto;
 import com.bloducspauter.system.service.CourseCategoryService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -16,6 +17,7 @@ import java.util.List;
  *
  */
 @RestController
+@RequestMapping("content")
 public class CourseCategoryController {
 
     //暂时调用service模块里面的CourseCategoryService
