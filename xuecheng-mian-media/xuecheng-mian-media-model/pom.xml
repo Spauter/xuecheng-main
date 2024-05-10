@@ -3,18 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.bloducspauter</groupId>
-        <artifactId>xuecheng-main-parent</artifactId>
+        <artifactId>xuecheng-mian-media</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../xuecheng-main-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>xuecheng-mian-media</artifactId>
+    <artifactId>xuecheng-mian-media-model</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>xuecheng-mian-media-api</module>
-        <module>xuecheng-mian-media-service</module>
-        <module>xuecheng-mian-media-model</module>
-    </modules>
 
     <distributionManagement>
         <site>

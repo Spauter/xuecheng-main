@@ -26,5 +26,9 @@
     <file url="file://$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-mian-media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-mian-media/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-mian-media/xuecheng-mian-media-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-mian-media/xuecheng-mian-media-api/src/main/resources" charset="UTF-8" />
   </component>
 </project>
