@@ -22,20 +22,20 @@
     </parent>
     <properties>
         <java.version>11</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <com.spring4all>1.9.0.RELEASE</com.spring4all>
-        <mybatis.plus.boot.starter.version>3.4.2</mybatis.plus.boot.starter.version>
-        <spring.boot.starter.data.redis>2.7.16</spring.boot.starter.data.redis>
-        <spring.session.data.redis>2.7.2</spring.session.data.redis>
-        <com.alibaba.cloud>2021.0.5.0</com.alibaba.cloud>
-        <org.springframework.cloud>3.1.6</org.springframework.cloud>
-        <com.fasterxml.jackson.core>2.12.5</com.fasterxml.jackson.core>
-        <com.alibaba>1.2.76</com.alibaba>
-        <com.alibaba.druid>1.2.16</com.alibaba.druid>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.springframework.boot>2.7.16</org.springframework.boot>
         <com.baomidou>3.4.2</com.baomidou>
-        <com.alibaba.csp>1.8.6</com.alibaba.csp>
+        <mybatis.plus.boot.starter.version>3.4.2</mybatis.plus.boot.starter.version>
+        <org.springframework.session>2.7.2</org.springframework.session>
         <com.github.xiaoymin>4.4.0</com.github.xiaoymin>
+        <com.spring4all>1.9.0.RELEASE</com.spring4all>
+        <org.springframework.cloud>3.1.6</org.springframework.cloud>
+        <com.alibaba.cloud>2021.0.5.0</com.alibaba.cloud>
+        <com.alibaba>1.2.76</com.alibaba>
+        <com.fasterxml.jackson.core>2.12.5</com.fasterxml.jackson.core>
+        <com.alibaba.druid>1.2.16</com.alibaba.druid>
+        <com.alibaba.csp>1.8.6</com.alibaba.csp>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -44,6 +44,12 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
                 <version>${com.github.xiaoymin}</version>
+            </dependency>
+            <!--            swagger-->
+            <dependency>
+                <groupId>com.spring4all</groupId>
+                <artifactId>swagger-spring-boot-starter</artifactId>
+                <version>${com.spring4all}</version>
             </dependency>
             <!--        nacos注册发现-->
             <dependency>
@@ -57,11 +63,13 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${com.alibaba.cloud}</version>
             </dependency>
+            <!--            fastjson-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${com.alibaba}</version>
             </dependency>
+            <!--            mybatis plus-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -77,6 +85,18 @@
                 <artifactId>mybatis-plus-annotation</artifactId>
                 <version>${com.baomidou}</version>
             </dependency>
+            <!--            redis-->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>${org.springframework.boot}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session-data-redis</artifactId>
+                <version>${org.springframework.session}</version>
+            </dependency>
+            <!--            jackson 转换-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
@@ -116,17 +136,23 @@
                 <artifactId>spring-cloud-starter-bootstrap</artifactId>
                 <version>${org.springframework.cloud}</version>
             </dependency>
+            <!--        sentinel依赖-->
             <dependency>
                 <groupId>com.alibaba.csp</groupId>
                 <artifactId>sentinel-transport-simple-http</artifactId>
                 <version>${com.alibaba.csp}</version>
             </dependency>
-            <!--        sentinel依赖-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
                 <version>${com.alibaba.cloud}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-core</artifactId>
+                <version>${com.alibaba.csp}</version>
+            </dependency>
+            <!--            fastdfs-->
             <dependency>
                 <groupId>com.luhuiguo</groupId>
                 <artifactId>fastdfs-client</artifactId>
@@ -137,6 +163,7 @@
                 <artifactId>fastdfs-spring-boot-starter</artifactId>
                 <version>0.2.0</version>
             </dependency>
+            <!--            druid 连接池-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
@@ -153,21 +180,11 @@
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${org.springframework.cloud}</version>
             </dependency>
-            <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-core</artifactId>
-                <version>${com.alibaba.csp}</version>
-            </dependency>
-            <!--            getway相关依赖-->
+            <!--            getaway相关依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>
                 <version>${org.springframework.cloud}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.spring4all</groupId>
-                <artifactId>swagger-spring-boot-starter</artifactId>
-                <version>${com.spring4all}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
