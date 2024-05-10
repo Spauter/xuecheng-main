@@ -13,6 +13,7 @@
         <module>../xuecheng-main-base</module>
         <module>../xuecheng-main-system</module>
         <module>../xuecheng-main-gateway</module>
+        <module>../xuecheng-mian-media</module>
     </modules>
 
     <parent>
