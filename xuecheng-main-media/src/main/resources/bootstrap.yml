@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: http://192.168.24.128:8848
+        namespace: 185483881
+        username: nacos
+        password: nacos
+        prefix: XC-M-media
+        group: XC-M
+        file-extension: yml
+      discovery:
+        group: XC-M
+        namespace: 185483881
+        service: XC-M-media
+        server-addr:  http://192.168.24.128:8848
+logging:
+  config: classpath:logback.xml

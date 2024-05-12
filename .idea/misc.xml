@@ -16,13 +16,19 @@
         <option value="$PROJECT_DIR$/xuecheng-main-system/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-api/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-system/xuecheng-main-system-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-main-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/xuecheng-main-media/xuecheeng-main-media-api/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/xuecheng-main-content/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-main-parent/xuecheng-main-base/xuecheng-main-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-mian-media/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-mian-media/xuecheng-mian-media-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-mian-media/xuecheng-mian-media-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-mian-media/xuecheng-mian-media-service/pom.xml" />
       </set>
     </option>
   </component>

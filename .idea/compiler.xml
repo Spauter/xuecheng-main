@@ -18,21 +18,31 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="xuecheeng-main-media-api" target="11" />
       <module name="xuecheng-main" target="11" />
+      <module name="xuecheng-mian-media" target="11" />
+      <module name="xuecheng-mian-media-api" target="11" />
+      <module name="xuecheng-mian-media-model" target="11" />
+      <module name="xuecheng-mian-media-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xuecheeng-main-media-api" options="" />
       <module name="xuecheng-main-base" options="-parameters" />
       <module name="xuecheng-main-content" options="" />
       <module name="xuecheng-main-content-api" options="-parameters" />
       <module name="xuecheng-main-content-model" options="-parameters" />
       <module name="xuecheng-main-content-service" options="-parameters" />
       <module name="xuecheng-main-gateway" options="-parameters" />
+      <module name="xuecheng-main-media" options="" />
       <module name="xuecheng-main-parent" options="" />
       <module name="xuecheng-main-system-api" options="-parameters" />
       <module name="xuecheng-main-system-model" options="-parameters" />
       <module name="xuecheng-main-system-service" options="-parameters" />
+      <module name="xuecheng-mian-media-api" options="-parameters" />
+      <module name="xuecheng-mian-media-model" options="" />
+      <module name="xuecheng-mian-media-service" options="" />
     </option>
   </component>
 </project>
