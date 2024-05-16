@@ -9,7 +9,10 @@ import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+/**
+ * @author Bloduc Spauter
+ *
+ */
 @Configuration
 @MapperScan("com.bloducspauter.content.mapper")
 public class LocalDateTimeConfig {

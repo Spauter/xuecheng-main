@@ -2,7 +2,6 @@ package com.bloducspauter.system.controller;
 
 
 
-
 import com.bloducspauter.system.model.po.Dictionary;
 import com.bloducspauter.system.service.DictionaryService;
 import lombok.extern.slf4j.Slf4j;

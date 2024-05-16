@@ -13,9 +13,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
  * </p>
  * @author Bloduc Spauter
  */
-@EnableScheduling
+
 @SpringBootApplication
-@EnableSwagger2WebMvc
 @EnableDiscoveryClient
 public class SystemApplication {
     public static void main(String[] args) {

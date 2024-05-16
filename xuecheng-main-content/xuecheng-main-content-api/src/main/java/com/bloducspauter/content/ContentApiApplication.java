@@ -3,7 +3,6 @@ import com.bloducspauter.system.service.CourseCategoryService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-
 /**
  * 内容管理启动类
  * @author Bloduc Spauter
