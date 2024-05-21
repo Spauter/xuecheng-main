@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bloducspauter.base.enums.CommonError;
 import com.bloducspauter.base.exceptions.IllegalParamException;
+import com.bloducspauter.base.exceptions.InsertEntityFailedException;
 import com.bloducspauter.base.model.PageParams;
 import com.bloducspauter.base.model.PageResult;
 import com.bloducspauter.media.entities.dto.QueryMediaParamsDto;
@@ -137,7 +138,7 @@ public class MediaFileServiceImpl implements MediaService {
     }
 
     @Override
-    public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath) {
+    public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath) throws InsertEntityFailedException {
 
         //文件名
         String filename = uploadFileParamsDto.getFilename();
@@ -155,12 +156,12 @@ public class MediaFileServiceImpl implements MediaService {
         //上传文件到minio
         boolean result = addMediaFilesToMinIO(localFilePath, mimeType, bucket_mediafiles, objectName);
         if(!result){
-            IllegalParamException.cast(CommonError.valueOf("上传文件失败"));
+            throw new InsertEntityFailedException();
         }
         //入库文件信息
         MediaFiles mediaFiles = currentProxy.addMediaFilesToDb(companyId, fileMd5, uploadFileParamsDto, bucket_mediafiles, objectName);
         if(mediaFiles==null){
-            IllegalParamException.cast(CommonError.valueOf("文件上传后保存信息失败"));
+           throw new InsertEntityFailedException("上传后保存文件信息失败");
         }
         //准备返回的对象
         UploadFileResultDto uploadFileResultDto = new UploadFileResultDto();

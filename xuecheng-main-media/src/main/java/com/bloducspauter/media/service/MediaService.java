@@ -1,5 +1,6 @@
 package com.bloducspauter.media.service;
 
+import com.bloducspauter.base.exceptions.InsertEntityFailedException;
 import com.bloducspauter.base.model.PageParams;
 import com.bloducspauter.base.model.PageResult;
 import com.bloducspauter.media.entities.po.MediaFiles;
@@ -27,7 +28,7 @@ public interface MediaService {
      * @param localFilePath       文件本地路径
      * @return UploadFileResultDto
      */
-    public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath);
+    public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath) throws InsertEntityFailedException;
 
     public MediaFiles addMediaFilesToDb(Long companyId, String fileMd5, UploadFileParamsDto uploadFileParamsDto, String bucket, String objectName);
 }
