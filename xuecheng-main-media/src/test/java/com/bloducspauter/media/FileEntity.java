@@ -23,7 +23,7 @@ public final class FileEntity {
     /**
      * 每个分块文件大小
      */
-    public static int PART_SIZE = 1024 * 1024;
+    public static int PART_SIZE = 1024 * 1024 * 5;
     /**
      * 文件名
      */
@@ -54,7 +54,8 @@ public final class FileEntity {
     private Long fileLength;
 
     /**
-     * 初始化类
+     * 删除本地存储的所有分块文件
+     *
      * @param filePath 文件路径
      */
     private static void initFile(String filePath) {
@@ -68,7 +69,7 @@ public final class FileEntity {
                 if (f.isDirectory()) {
                     initFile(f.getPath());
                 }
-                System.out.println("delete "+f.getAbsolutePath());
+                System.out.println("delete " + f.getAbsolutePath());
                 f.delete();
             }
         } catch (NullPointerException e) {
@@ -85,6 +86,7 @@ public final class FileEntity {
 
     /**
      * 提供以文件路径为参数的有参构造
+     *
      * @param filePath 文件路径
      */
     public FileEntity(String filePath) throws Exception {
@@ -95,6 +97,7 @@ public final class FileEntity {
 
     /**
      * 提供以{@code  File}为参数的有参构造
+     *
      * @param file
      * @throws Exception
      */
@@ -105,6 +108,7 @@ public final class FileEntity {
 
     /**
      * 通过{@code java swing}图形化页面选取文件来设置;
+     *
      * @throws NullPointerException 当选取结果为空时抛出异常
      */
     public void selectFile() throws Exception {
@@ -168,7 +172,7 @@ public final class FileEntity {
                     break;
                 }
             }
-            System.out.println("本地分块"+i+"成功");
+            System.out.println("本地分块" + i + "成功");
             partFile.close();
         }
         randomAccessFile.close();
@@ -231,6 +235,7 @@ public final class FileEntity {
 
     /**
      * 获取MD5值
+     *
      * @param filename 文件路径
      */
     public String getMD5Checksum(String filename) throws Exception {
@@ -247,24 +252,25 @@ public final class FileEntity {
      */
     public String getBinarySystemLong() {
         //计算数量级
-      int magnitude=getMagnitude(1024);
-      double result=getResult(fileLength,magnitude,1024);
-      String unit=getUnit(magnitude);
-      return String.format("%.2f",result)+" "+unit;
+        int magnitude = getMagnitude(1024);
+        double result = getResult(fileLength, magnitude, 1024);
+        String unit = getUnit(magnitude);
+        return String.format("%.2f", result) + " " + unit;
     }
 
     /**
      * 获取文件单位（在十进制下）
      */
     public String getDecimal() {
-        int magnitude=getMagnitude(1000);
-        double result=getResult(fileLength,magnitude,1000);
-        String unit=getUnit(magnitude);
-        return String.format("%.2f",result)+" "+unit;
+        int magnitude = getMagnitude(1000);
+        double result = getResult(fileLength, magnitude, 1000);
+        String unit = getUnit(magnitude);
+        return String.format("%.2f", result) + " " + unit;
     }
 
     /**
      * 获取数量级
+     *
      * @param var 进制单位
      */
     private int getMagnitude(int var) {
@@ -273,24 +279,37 @@ public final class FileEntity {
 
     /**
      * 获取合适的大小单位
+     *
      * @param magnitude 数量集
      */
     private String getUnit(int magnitude) {
-        String unit="B";
+        String unit = "B";
         switch (magnitude) {
-            case 0:unit="B";break;
-            case 1:unit="KB";break;
-            case 2:unit="MB";break;
-            case 3:unit="GB";break;
-            case 4:unit="TB";break;
-            case 5:unit="PB";break;
+            case 0:
+                unit = "B";
+                break;
+            case 1:
+                unit = "KB";
+                break;
+            case 2:
+                unit = "MB";
+                break;
+            case 3:
+                unit = "GB";
+                break;
+            case 4:
+                unit = "TB";
+                break;
+            case 5:
+                unit = "PB";
+                break;
         }
         return unit;
     }
 
-    private double getResult(double origin, int magnitude,int var) {
+    private double getResult(double origin, int magnitude, int var) {
         for (int i = 0; i < magnitude; i++) {
-            origin/=var;
+            origin /= var;
         }
         return origin;
     }
