@@ -4,7 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
-
+/**
+ * 媒体管理启动类
+ * @author Bloduc Spauter
+ *
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableSwagger2WebMvc

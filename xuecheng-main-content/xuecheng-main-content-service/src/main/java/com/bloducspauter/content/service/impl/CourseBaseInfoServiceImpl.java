@@ -65,7 +65,8 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         CourseBase courseBaseNew = new CourseBase();
         //将传入的页面的参数放到courseBaseNew对象
         //上边的从原始对象中get拿数据向新对象set，比较复杂
-        BeanUtils.copyProperties(dto, courseBaseNew);//只要属性名称一致就可以拷贝
+        //只要属性名称一致就可以拷贝
+        BeanUtils.copyProperties(dto, courseBaseNew);
         courseBaseNew.setCompanyId(companyId);
         courseBaseNew.setCreateDate(LocalDateTime.now());
         //审核状态默认为未提交
@@ -88,9 +89,8 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         //保存营销信息
         saveCourseMarket(courseMarketNew);
         //从数据库查询课程的详细信息，包括两部分
-        CourseBaseInfoDto courseBaseInfo = getCourseBaseInfo(courseId);
 
-        return courseBaseInfo;
+        return getCourseBaseInfo(courseId);
     }
 
     //查询课程信息

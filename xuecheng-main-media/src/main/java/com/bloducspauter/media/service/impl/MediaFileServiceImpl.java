@@ -46,9 +46,6 @@ public class MediaFileServiceImpl implements MediaService {
     @Resource
     MinioClient minioClient;
 
-    @Resource
-    MediaService currentProxy;
-
     //存储普通文件
     @Value("${minio.bucket.files}")
     private String bucket_mediafiles;
@@ -159,7 +156,7 @@ public class MediaFileServiceImpl implements MediaService {
             throw new InsertEntityFailedException();
         }
         //入库文件信息
-        MediaFiles mediaFiles = currentProxy.addMediaFilesToDb(companyId, fileMd5, uploadFileParamsDto, bucket_mediafiles, objectName);
+        MediaFiles mediaFiles =addMediaFilesToDb(companyId, fileMd5, uploadFileParamsDto, bucket_mediafiles, objectName);
         if(mediaFiles==null){
            throw new InsertEntityFailedException("上传后保存文件信息失败");
         }
