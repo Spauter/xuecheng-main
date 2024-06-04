@@ -66,7 +66,7 @@ public class BigFileTest {
         //分块文件信息
         ComposeObjectArgs composeObjectArgs = ComposeObjectArgs.builder()
                 .bucket("mediafiles")
-                .object(fileEntity.getFileName())
+                .object(fileEntity.getFileMd5()+"/"+fileEntity.getFileName())
                 .sources(sources)
                 .build();
         minioClient.composeObject(composeObjectArgs);
