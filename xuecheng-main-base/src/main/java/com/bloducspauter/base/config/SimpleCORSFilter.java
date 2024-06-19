@@ -1,4 +1,4 @@
-package com.bloducspauter.content.config;
+package com.bloducspauter.base.config;
 
 
 import org.springframework.stereotype.Component;
@@ -26,6 +26,7 @@ public class SimpleCORSFilter implements Filter {
         response.setHeader("Access-Control-Max-Age", "3600");
         response.setHeader("Access-Control-Allow-Headers", "access-control-allow-origin, authority, content-type, version-info, X-Requested-With");
         response.setContentType("application/json;charset=UTF-8");
+        String url=reqs.getRequestURI();
         chain.doFilter(req, res);
 
     }
