@@ -35,13 +35,13 @@ public class CourseBaseInfoController {
         return courseBaseInfoService.queryCourseBaseList(pageParams, queryCourseParamsDto);
     }
 
-//    @ApiOperation("新增课程")
-//    @PostMapping("/course")
-//    public CourseBaseInfoDto createCourseBase(@RequestBody @Validated AddCourseDto addCourseDto) throws InsertEntityFailedException {
-//        //获取到用户所属机构的id
-//        Long companyId = 1232141425L;
-//        return courseBaseInfoService.createCourseBase(companyId, addCourseDto);
-//    }
+    @ApiOperation("新增课程")
+    @PostMapping("/course")
+    public CourseBaseInfoDto createCourseBase(@RequestBody @Validated AddCourseDto addCourseDto) throws InsertEntityFailedException {
+        //获取到用户所属机构的id
+        Long companyId = 1232141425L;
+        return courseBaseInfoService.createCourseBase(companyId, addCourseDto);
+    }
 
     @ApiOperation("根据课程id查询接口")
     @GetMapping("/course/{courseId}")
@@ -49,12 +49,11 @@ public class CourseBaseInfoController {
         return courseBaseInfoService.getCourseBaseInfo(courseId);
     }
 
-
-//    @ApiOperation("修改课程")
-//    @RequestMapping("/course")
-//    public CourseBaseInfoDto modifyCourseBase(@RequestBody @Validated(ValidationGroups.Update.class) EditCourseDto editCourseDto) throws InsertEntityFailedException {
-//        //获取到用户所属机构的id
-//        Long companyId = 1232141425L;
-//        return courseBaseInfoService.updateCourseBase(companyId, editCourseDto);
-//    }
+    @ApiOperation("修改课程")
+    @PutMapping("/course")
+    public CourseBaseInfoDto modifyCourseBase(@RequestBody @Validated(ValidationGroups.Update.class) EditCourseDto editCourseDto) throws InsertEntityFailedException {
+        //获取到用户所属机构的id
+        Long companyId = 1232141425L;
+        return courseBaseInfoService.updateCourseBase(companyId, editCourseDto);
+    }
 }
