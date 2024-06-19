@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -60,30 +61,30 @@ public class GlobalExceptionHandler {
         return new RestErrorResponse(errMessage);
     }
 
+    @ResponseBody
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public RestErrorResponse customException(MethodArgumentNotValidException exception) {
-        BindingResult bindingResult = exception.getBindingResult();
+    public RestErrorResponse methodArgumentNotValidException(MethodArgumentNotValidException e){
+        BindingResult bindingResult = e.getBindingResult();
         //存储错误信息
         List<String> errors = new ArrayList<>();
-        bindingResult.getFieldErrors().forEach(item -> {
+        bindingResult.getFieldErrors().stream().forEach(item->{
             errors.add(item.getDefaultMessage());
         });
-
         //将list中的错误信息拼接起来
         String errMessage = StringUtils.join(errors, ',');
         //记录异常
-        log.error("系统异常{},原因{}", exception.getMessage(), errMessage);
-
+        log.error("系统异常{}:{}",e.getMessage(),errMessage);
         //解析出异常信息
         return new RestErrorResponse(errMessage);
     }
 
+    @ResponseBody
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public RestErrorResponse exception(Exception e) {
+    public RestErrorResponse exception(Exception e){
         //记录异常
-        log.error("系统异常{}", e.getMessage(), e);
+        log.error("系统异常{}",e.getMessage(),e);
         //解析出异常信息
         return new RestErrorResponse(CommonError.UNKNOWN_ERROR.getErrMessage());
     }

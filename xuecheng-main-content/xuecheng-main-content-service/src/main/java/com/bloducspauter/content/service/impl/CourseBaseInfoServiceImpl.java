@@ -1,7 +1,7 @@
 package com.bloducspauter.content.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bloducspauter.base.enums.CommonError;
 import com.bloducspauter.base.exceptions.IllegalParamException;
@@ -42,11 +42,17 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     @Override
     public PageResult<CourseBase> queryCourseBaseList(PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto) {
         LambdaQueryWrapper<CourseBase> queryWrapper = new LambdaQueryWrapper<>();
-        //根据名字模糊查询
-        queryWrapper.like(StringUtils.isNotBlank(queryCourseParamsDto.getCourseName()), CourseBase::getName, queryCourseParamsDto.getCourseName());
-        //根据审核状态准确查询
-        queryWrapper.eq(StringUtils.isNotBlank(queryCourseParamsDto.getAuditStatus()), CourseBase::getAuditStatus, queryCourseParamsDto.getAuditStatus());
-        //获取分页参数
+        //根据名称模糊查询,在sql中拼接 course_base.name like '%值%'
+        queryCourseParamsDto=queryCourseParamsDto==null?new QueryCourseParamsDto():queryCourseParamsDto;
+        String getCourseName=queryCourseParamsDto.getCourseName();
+        boolean name=StringUtils.isNotEmpty(getCourseName);
+        String courseName=queryCourseParamsDto.getCourseName();
+        queryWrapper.like(name,CourseBase::getName,courseName);
+        //根据课程审核状态查询 course_base.audit_status = ?
+        boolean auditStatus=StringUtils.isNotEmpty(queryCourseParamsDto.getAuditStatus());
+        String status=queryCourseParamsDto.getAuditStatus();
+        queryWrapper.eq(auditStatus, CourseBase::getAuditStatus,status);
+
         long pageNo = pageParams.getPageNo();
         long pageSize = pageParams.getPageSize();
         Page<CourseBase> courseBasePage = new Page<>(pageNo, pageSize);

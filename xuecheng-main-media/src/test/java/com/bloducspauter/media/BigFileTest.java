@@ -74,27 +74,6 @@ public class BigFileTest {
 
     }
 
-    @Test
-    public void getFile() throws IOException {
-        GetObjectArgs getObjectArgs = GetObjectArgs.builder().bucket("mediafiles").object("001/test001.bmp").build();
-        try (
-                FilterInputStream inputStream = minioClient.getObject(getObjectArgs);
-                FileOutputStream outputStream = new FileOutputStream("C:\\users\\32306\\desktop\\1.bmp");
-        ) {
-            IOUtils.copy(inputStream, outputStream);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        FileInputStream fileInputStream1 = new FileInputStream("E:\\backup\\spauter\\Genshin Impact\\胡桃 (7).bmp");
-        String source_md5 = DigestUtils.md5Hex(fileInputStream1);
-        FileInputStream fileInputStream = new FileInputStream("C:\\users\\32306\\desktop\\1.bmp");
-        String local_md5 = DigestUtils.md5Hex(fileInputStream);
-        if (source_md5.equals(local_md5)) {
-            System.out.println("Download success");
-        } else {
-            System.out.println("Download failed");
-        }
-    }
 
     @Test
     public void get() throws Exception {
