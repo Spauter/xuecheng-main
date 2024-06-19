@@ -1,86 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration monitorInterval="180" packages="">
-    <properties>
-        <property name="logdir">logs</property>
-        <property name="PATTERN">%date{YYYY-MM-dd HH:mm:ss,SSS} %level [%thread][%file:%line] - %msg%n%throwable</property>
-    </properties>
-    <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="${PATTERN}"/>
-        </Console>
 
-        <RollingFile name="ErrorAppender" fileName="${logdir}/error.log"
-            filePattern="${logdir}/$${date:yyyy-MM-dd}/error.%d{yyyy-MM-dd-HH}.log" append="true">
-            <PatternLayout pattern="${PATTERN}"/>
-            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
-            </Policies>
-        </RollingFile>
+<!-- 配置文件每隔1分钟，就检查更新 -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
 
-        <RollingFile name="DebugAppender" fileName="${logdir}/info.log"
-            filePattern="${logdir}/$${date:yyyy-MM-dd}/info.%d{yyyy-MM-dd-HH}.log" append="true">
-            <PatternLayout pattern="${PATTERN}"/>
-            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
-            </Policies>
-        </RollingFile>
-        
-        <!--异步appender-->
-         <Async name="AsyncAppender" includeLocation="true">
-            <AppenderRef ref="ErrorAppender"/>
-            <AppenderRef ref="DebugAppender"/>
-        </Async>
-    </Appenders>
-    
-    <Loggers>
-         <!--过滤掉spring和mybatis的一些无用的debug信息!-->
-        <logger name="org.springframework" level="ERROR">
-        </logger>
-        <logger name="org.mybatis" level="INFO">
-        </logger>
-        <logger name="cn.itcast.wanxinp2p.consumer.mapper" level="DEBUG">
-        </logger>
+    <!-- ch.qos.logback.core.ConsoleAppender 控制台输出 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 过去使用layout，现在都推荐使用encoder
+             作用一：将日志信息转换（格式化）为字符串
+             作用二：然后写入到文件中-->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
 
-        <logger name="springfox" level="INFO">
-        </logger>
-		<logger name="org.apache.http" level="INFO">
-        </logger>
-        <logger name="com.netflix.discovery" level="INFO">
-        </logger>
-        
-        <logger name="RocketmqCommon"  level="INFO" >
-		</logger>
-		
-		<logger name="RocketmqRemoting" level="INFO"  >
-		</logger>
-		
-		<logger name="RocketmqClient" level="WARN">
-		</logger>
+    <appender name="accessLog" class="ch.qos.logback.core.FileAppender">
+        <file>gateway_access_log.log</file>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="async" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="accessLog" />
+    </appender>
 
-        <logger name="org.dromara.hmily" level="WARN">
-        </logger>
 
-        <logger name="org.dromara.hmily.lottery" level="WARN">
-        </logger>
 
-        <logger name="org.dromara.hmily.bonuspoint" level="WARN">
-        </logger>
-        <logger name="com.bloducspauter" level="DEBUG"/>
-		
-        <!--OFF   0-->
-        <!--FATAL   100-->
-        <!--ERROR   200-->
-        <!--WARN   300-->
-        <!--INFO   400-->
-        <!--DEBUG   500-->
-        <!--TRACE   600-->
-        <!--ALL   Integer.MAX_VALUE-->
-        <Root level="DEBUG" includeLocation="true">
-            <AppenderRef ref="AsyncAppender"/>
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="DebugAppender"/>
-        </Root>
-    </Loggers>
-</Configuration>
+    <logger name="reactor.netty.http.server.AccessLog" level="INFO" additivity="false">
+        <appender-ref ref="async"/>
+    </logger>
+
+    <logger name="org.springframework" level="info">
+        <appender-ref ref="console" />
+    </logger>
+
+    <logger name="com.bloducspauter" level="info">
+        <appender-ref ref="console" />
+    </logger>
+
+
+
+
+    <!-- 也是一种<logger>,是所有<logger>的父级 -->
+    <!-- 不设置additivity属性，或者设置additivity = true的<logger>,会继承root的子标签<appender-ref ref="console" />的设置，
+        将它自己设置的level属性级别及以上的日志打印到控制台 -->
+    <!--    <root level="info">-->
+    <!--        &lt;!&ndash; 表示按照console的设置去输出日志到控制台 &ndash;&gt;-->
+    <!--        <appender-ref ref="console"/>-->
+    <!--    </root>-->
+</configuration>

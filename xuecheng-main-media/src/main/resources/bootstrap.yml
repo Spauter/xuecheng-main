@@ -1,10 +1,4 @@
 spring:
-  servlet:
-    multipart:
-      # 设置单个文件最大大小为10MB
-      max-file-size: 10MB
-      # 设置多个文件大小为100MB
-      max-request-size: 100MB
   cloud:
     nacos:
       config:
@@ -17,13 +11,9 @@ spring:
         file-extension: yml
         shared-configs:
           - {data-id: 'XC-MySQL8.yml',refresh: true,group: XC-M}
-          - { data-id: 'minio-dev.yml',refresh: true,group: XC-M }
+          - {data-id: 'minio-dev.yml',refresh: true,group: XC-M }
       discovery:
         group: XC-M
         namespace: 185483881
         service: XC-M-media
         server-addr:  http://192.168.24.128:8848
-logging:
-  config: classpath:log4j2-dev.xml
-  file:
-    path: logs/
