@@ -1,7 +1,8 @@
 package com.bloducspauter.base.utils;
 
+
 import com.alibaba.fastjson.JSON;
-import com.xuecheng.base.model.RestResponse;
+import com.bloducspauter.base.model.RestResponse;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
@@ -18,28 +19,16 @@ import java.util.Map;
  */
 public class HttpUtil {
 
-    public static void writerError(RestResponse restResponse, HttpServletResponse response) throws IOException {
+    public static void writerError(RestResponse<Boolean> restResponse, HttpServletResponse response) throws IOException {
         response.setContentType("application/json,charset=utf-8");
-        response.setStatus(Integer.valueOf(restResponse.getCode()));
+        response.setStatus(restResponse.getCode());
         JSON.writeJSONString(response.getOutputStream(), restResponse);
     }
 
     public static String getAccessToken(String ak,String sk) throws  Exception {
         // 获取token地址
-        String authHost = "https://aip.baidubce.com/oauth/2.0/token?";
-        String getAccessTokenUrl = authHost
-                // 1. grant_type为固定参数
-                + "grant_type=client_credentials"
-                // 2. 官网获取的 API Key
-                + "&client_id=" + ak
-                // 3. 官网获取的 Secret Key
-                + "&client_secret=" + sk;
-            URL realUrl = new URL(getAccessTokenUrl);
-            // 打开和URL之间的连接
-            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();
-            connection.setRequestMethod("GET");
-            connection.connect();
-            // 获取所有响应头字段
+        HttpURLConnection connection = getHttpURLConnection(ak, sk);
+        // 获取所有响应头字段
             /*Map<String, List<String>> map = connection.getHeaderFields();
             // 遍历所有的响应头字段
             for (String key : map.keySet()) {
@@ -54,11 +43,25 @@ public class HttpUtil {
             }
             in.close();
             connection.disconnect();
-            /**
-             * 返回结果
-             */
-            Map<String,Object> resultMap= JsonUtil.jsonToMap(result);
+        Map<String,Object> resultMap= JsonUtil.jsonToMap(result);
             return resultMap.get("access_token").toString();
+    }
+
+    private static HttpURLConnection getHttpURLConnection(String ak, String sk) throws IOException {
+        String authHost = "https://aip.baidubce.com/oauth/2.0/token?";
+        String getAccessTokenUrl = authHost
+                // 1. grant_type为固定参数
+                + "grant_type=client_credentials"
+                // 2. 官网获取的 API Key
+                + "&client_id=" + ak
+                // 3. 官网获取的 Secret Key
+                + "&client_secret=" + sk;
+        URL realUrl = new URL(getAccessTokenUrl);
+        // 打开和URL之间的连接
+        HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();
+        connection.setRequestMethod("GET");
+        connection.connect();
+        return connection;
     }
 
     public static String post(String requestUrl, String accessToken, String params)
@@ -84,19 +87,7 @@ public class HttpUtil {
 
     public static String postGeneralUrl(String generalUrl, String contentType, String params, String encoding)
             throws Exception {
-        URL url = new URL(generalUrl);
-        // 打开和URL之间的连接
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("POST");
-        // 设置通用的请求属性
-        connection.setRequestProperty("Content-Type", contentType);
-        connection.setRequestProperty("Connection", "Keep-Alive");
-        connection.setUseCaches(false);
-        connection.setDoOutput(true);
-        connection.setDoInput(true);
-        connection.setConnectTimeout(20000);
-        connection.setReadTimeout(20000);
-
+        HttpURLConnection connection = getUrlConnection(generalUrl, contentType);
         // 得到请求的输出流对象
         DataOutputStream out = new DataOutputStream(connection.getOutputStream());
         out.write(params.getBytes(encoding));
@@ -124,5 +115,21 @@ public class HttpUtil {
         connection.disconnect();
         //System.err.println("result:" + result);
         return result;
+    }
+
+    private static HttpURLConnection getUrlConnection(String generalUrl, String contentType) throws IOException {
+        URL url = new URL(generalUrl);
+        // 打开和URL之间的连接
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("POST");
+        // 设置通用的请求属性
+        connection.setRequestProperty("Content-Type", contentType);
+        connection.setRequestProperty("Connection", "Keep-Alive");
+        connection.setUseCaches(false);
+        connection.setDoOutput(true);
+        connection.setDoInput(true);
+        connection.setConnectTimeout(20000);
+        connection.setReadTimeout(20000);
+        return connection;
     }
 }
