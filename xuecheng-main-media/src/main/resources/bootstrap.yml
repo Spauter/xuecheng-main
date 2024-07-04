@@ -10,10 +10,10 @@ spring:
         group: XC-M
         file-extension: yml
         shared-configs:
-          - {data-id: 'XC-MySQL8.yml',refresh: true,group: XC-M}
-          - {data-id: 'minio-dev.yml',refresh: true,group: XC-M }
+          - { data-id: 'XC-MySQL8.yml',refresh: true,group: XC-M }
+          - { data-id: 'minio-dev.yml',refresh: true,group: XC-M }
       discovery:
         group: XC-M
         namespace: 185483881
         service: XC-M-media
-        server-addr:  http://192.168.24.128:8848
+        server-addr: http://192.168.24.128:8848
